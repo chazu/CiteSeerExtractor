@@ -18,6 +18,7 @@ class Extraction:
                 return headers
         def extractCitations(self,path):
                 """extract citations from text file"""
+                web.debug("Citations from text file: " + citations)
                 citations = subprocess.check_output([ROOT_FOLDER+"bin/getCitations.pl",path])
                 web.debug(citations)
                 return citations
